@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gsap 2</title>
+    <link rel="stylesheet" href="gsap2.css" />
+  </head>
+  <body>
+    <section>
+      <div class="mask">
+        <img src="./img/alice-pasqual-u_8m7fCJQmw-unsplash.jpg" alt="" />
+        <div class="description">
+          <p>Cream</p>
+        </div>
+      </div>
+      <div class="mask">
+        <img src="./img/brenda-godinez-t93le5UkiZk-unsplash.jpg" alt="" />
+        <div class="description">
+          <p>Latte</p>
+        </div>
+      </div>
+      <div class="mask">
+        <img src="./img/mae-mu-GFhqNX1gE9E-unsplash.jpg" alt="" />
+        <div class="description">
+          <p>Chocolate</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="button-back">
+      <button><a href="/index.html">Back to Main menu</a></button>
+    </div>
+
+    <!-- logic javascript -------------------------------------------------------------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      gsap.set('img', {
+        yPercent: -100,
+      });
+
+      gsap.set(['p', '.button-back'], {
+        opacity: 0,
+        y: 50,
+      });
+
+      gsap.to('img', {
+        yPercent: 0,
+        scale: 1.3,
+        delay: 0.5,
+        duration: 1.5,
+        stagger: 0.3,
+        ease: 'power4.out',
+        onComplete: scaleDownAndFadeIn,
+      });
+
+      function scaleDownAndFadeIn() {
+        gsap.to('img', {
+          scale: 1,
+          duration: 1,
+        });
+
+        gsap.to(['p', '.button-back'], {
+          opacity: 1,
+          y: 0,
+          stagger: 0.3,
+          duration: 2,
+        });
+      }
+    </script>
+  </body>
+</html>

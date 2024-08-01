@@ -1,0 +1,67 @@
+/* default settings ----------------------------------------------------------*/
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* colour */
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --darkWhiteColor: #f1f0ea;
+
+  /* font  */
+
+  --montserratFont: 'Montserrat', sans-serif;
+  --drukBoldTrial: 'DrukBoldTrial';
+  --monasansLightNarrow: 'MonaSansLightNarrow';
+  --monaSansLight: 'MonaSansLight';
+  --monaSansBold: 'MonaSansBold';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #cbcbcb;
+  --text-color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 13rem;
+}
+
+.progress {
+  background: rgb(163, 163, 163);
+  height: 1%;
+  width: 0%;
+  position: absolute;
+  top: 50%;
+}
+
+.button-back {
+  color: rgb(54, 54, 54);
+  padding-top: 2rem;
+}
+
+.button-back button {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.button-back a {
+  font-size: calc(0.6rem + 0.5vw);
+  text-decoration: none;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twean Animation</title>
+    <link rel="stylesheet" href="tweananimation.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <p>Luxury</p>
+    </div>
+
+    <div class="button-back">
+      <button><a href="/index.html">Back to Main menu</a></button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const container = document.getElementById('container');
+
+      const tweanMask = gsap.to(container, {
+        borderRadius: 0,
+        paused: true,
+      });
+
+      const tweanText = gsap.to('.container p', {
+        x: 0,
+        scale: 1,
+        paused: true,
+        duration: 1,
+      });
+
+      container.addEventListener('mouseenter', () => {
+        tweanMask.play();
+        tweanText.play();
+      });
+
+      container.addEventListener('mouseleave', () => {
+        tweanMask.reverse();
+        tweanText.reverse();
+      });
+    </script>
+  </body>
+</html>

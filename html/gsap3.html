@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gsap 3</title>
+    <link rel="stylesheet" href="gsap3.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="mask"><h1>Welcome</h1></div>
+        <image src="./svg/ball.svg" alt="" />
+      </div>
+      <div class="loader"></div>
+    </section>
+
+    <div class="button-back">
+      <button><a href="/index.html">Back to Main menu</a></button>
+    </div>
+
+    <!-- logic javascript -------------------------------------------------------------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      const ball = document.querySelector('img');
+      const h1 = document.querySelector('h1');
+      const loader = document.querySelector('.loader');
+      const button = document.querySelector('.button-back');
+
+      gsap.set(ball, {
+        yPercent: -600,
+        rotationZ: -295,
+      });
+
+      gsap.set(h1, {
+        yPercent: -100,
+      });
+
+      gsap.set(loader, {
+        scaleX: 0,
+      });
+
+      gsap.set(button, {
+        opacity: 0,
+      });
+
+      gsap.to(ball, {
+        yPercent: 0,
+        rotationZ: 0,
+        duration: 1.5,
+        ease: 'bounce.out',
+      });
+
+      gsap.to(h1, {
+        yPercent: 0,
+        delay: 1.7,
+      });
+
+      gsap.to(loader, {
+        scaleX: 1,
+        delay: 2,
+        duration: 2,
+      });
+
+      gsap.to(button, {
+        opacity: 1,
+        delay: 2,
+        duration: 2,
+      });
+    </script>
+  </body>
+</html>

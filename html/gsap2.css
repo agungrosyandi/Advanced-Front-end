@@ -1,0 +1,101 @@
+/* default settings ----------------------------------------------------------*/
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* colour */
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --darkWhiteColor: #f1f0ea;
+
+  /* font  */
+
+  --montserratFont: 'Montserrat', sans-serif;
+  --drukBoldTrial: 'DrukBoldTrial';
+  --monasansLightNarrow: 'MonaSansLightNarrow';
+  --monaSansLight: 'MonaSansLight';
+  --monaSansBold: 'MonaSansBold';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #dfdfdf;
+  --text-color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+section {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  width: 90vw;
+  height: 60vh;
+}
+
+.button-back {
+  color: rgb(54, 54, 54);
+  padding-top: 2rem;
+}
+
+.mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mask img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description p {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+.button-back {
+  display: flex;
+  justify-content: center;
+}
+
+.button-back button {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.button-back a {
+  font-size: calc(0.6rem + 0.5vw);
+  text-decoration: none;
+}
